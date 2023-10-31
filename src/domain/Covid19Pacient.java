@@ -41,9 +41,6 @@ public class Covid19Pacient {
 	public Set<Symptom> getSymptoms() {
 		return symptoms.keySet();
 	}
-	public Iterator<Symptom> iterator(){
-		return new Covid19PacientIterator(new ArrayList<Symptom>(symptoms.keySet()));
-	}
 	
 	public Symptom getSymptomByName(String symptomName) {
 		Iterator<Symptom> i= getSymptoms().iterator();
