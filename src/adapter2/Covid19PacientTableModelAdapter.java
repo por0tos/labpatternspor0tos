@@ -4,12 +4,12 @@ import javax.swing.table.AbstractTableModel;
 
 import domain.Covid19Pacient;
 
-public class PacientTableModel extends AbstractTableModel {
+public class Covid19PacientTableModelAdapter extends AbstractTableModel {
 	  protected Covid19Pacient pacient;
 	  protected String[] columnNames =
-	    new String[] { "Name", "Symptom", "Weight" };
+	    new String[] {"Symptom", "Weight" };
 
-	  public PacientTableModel(Covid19Pacient p) {
+	  public Covid19PacientTableModelAdapter(Covid19Pacient p) {
 	    this.pacient=p;
 	  }
 
