@@ -15,6 +15,10 @@ public class Covid19Pacient {
 	private Map<Symptom,Integer> symptoms=new HashMap<Symptom,Integer>();
 	private SymptomFactory ff;
 
+	public Covid19Pacient(String name, int years) {
+		this.name = name;
+		this.age = years;
+	}	
 
 	public Covid19Pacient(String name, int years, SymptomFactory symptomFactory) {
 		this.name = name;
