@@ -2,6 +2,7 @@ package adapter2;
 
 import java.awt.Component;
 import java.awt.Font;
+import java.util.List;
 
 import javax.swing.*;
 import javax.swing.table.TableModel;
@@ -12,11 +13,11 @@ import domain.Covid19Pacient;
 public class ShowPacientTableGUI extends JFrame{
 	
 	JTable table;
-	Covid19Pacient pacient;
+	List<Covid19Pacient> pacient;
 	
   
-  public ShowPacientTableGUI(Covid19Pacient pacient ) {
-	  	this.setTitle("Covid Symptoms "+pacient.getName());
+  public ShowPacientTableGUI(List<Covid19Pacient> pacient ) {
+	  	this.setTitle("Covid Symptoms ");
 	  	
 	  	this.pacient=pacient;
 	  	
