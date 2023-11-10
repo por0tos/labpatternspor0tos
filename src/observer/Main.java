@@ -13,11 +13,12 @@ public class Main {
 		Observable	pacient=new	Covid19Pacient("aitor",	35);
 		new	PacientObserverGUI	(pacient);
 		new	PacientSymptomGUI	((Covid19Pacient)pacient);
-		new PacientThermometerGUI ();
+		new PacientThermometerGUI (pacient);
 		
-		Observable	pacient2=new	Covid19Pacient("aitor",	35);
+		//Segundo paciente 
+		/*Observable	pacient2=new	Covid19Pacient("aitor",	35);
 		new	PacientObserverGUI	(pacient2);
 		new	PacientSymptomGUI	((Covid19Pacient)pacient2);
-		new PacientThermometerGUI ();
+		new PacientThermometerGUI (pacient2);*/
 	}
 }
