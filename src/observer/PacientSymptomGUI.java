@@ -5,7 +5,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import domain.Covid19Pacient;
 import domain.Symptom;
 
 import javax.swing.JLabel;
@@ -29,7 +28,7 @@ public class PacientSymptomGUI extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public PacientSymptomGUI(Covid19Pacient p) {
+	public PacientSymptomGUI(Covid19Pacient pacient) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(200, 100, 450, 300);
 		contentPane = new JPanel();
@@ -80,6 +79,9 @@ public class PacientSymptomGUI extends JFrame {
 		    	System.out.println("Symptom added :"+(Symptom)symptomComboBox.getSelectedItem());
 
 				//addSymptomByName ...
+		    	pacient.addSymptomByName(((Symptom)symptomComboBox.getSelectedItem()).getName(),	
+		    			Integer.parseInt(weightField.getText()));
+
 				
 			} else errorLabel.setText("ERROR, Weight between [1..3]");
 				
@@ -96,6 +98,7 @@ public class PacientSymptomGUI extends JFrame {
 		    	System.out.println("Symptom removed :"+(Symptom)symptomComboBox.getSelectedItem());
 
 				//removeSymptomByName...
+		    	pacient.removeSymptomByName(((Symptom)symptomComboBox.getSelectedItem()).getName());
 				
 			} 
 		});
@@ -113,7 +116,7 @@ public class PacientSymptomGUI extends JFrame {
 	    labelPacient = new JLabel("New label");
 		labelPacient.setFont(new Font("Lucida Grande", Font.BOLD, 13));
 		labelPacient.setBounds(271, 17, 131, 16);
-		labelPacient.setText(p.getName());
+		labelPacient.setText(pacient.getName());
 
 		contentPane.add(labelPacient);
 		this.setVisible(true);
